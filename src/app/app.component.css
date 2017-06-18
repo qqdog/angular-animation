@@ -1,0 +1,194 @@
+.ferris {
+	position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 25vh auto;
+    background-color: orange;
+    animation: ferris-rotate 10s infinite linear;
+}
+
+@keyframes ferris-rotate {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+}
+
+.group {
+	display: inline-block;
+    position: absolute;
+    top: 43%;
+    width: 200px;
+    height: 60px;
+    transform-origin: right;
+}
+
+.group1{
+	transform: rotate(0deg);
+
+}
+
+/*.group1:before {
+	content: '1';
+	float: left;
+    z-index: 99;
+    position: relative;
+}*/
+
+.group2{
+	transform: rotate(60deg);
+}
+
+/*.group2:before {
+	content: '2';
+	float: left;
+    z-index: 99;
+    position: relative;
+}*/
+
+.group3 {
+	transform: rotate(120deg);
+}
+
+/*.group3:before {
+	content: '3';
+	float: left;
+    z-index: 99;
+    position: relative;
+}*/
+
+.group4 {
+	transform: rotate(180deg);
+}
+
+/*.group4:before {
+	content: '4';
+	float: left;
+    z-index: 99;
+    position: relative;
+}*/
+
+.group5 {
+	transform: rotate(240deg);
+}
+
+/*.group5:before {
+	content: '5';
+	float: left;
+    z-index: 99;
+    position: relative;
+}*/
+
+.group6 {
+	transform: rotate(300deg);
+}
+
+/*.group6:before {
+	content: '6';
+	float: left;
+    z-index: 99;
+    position: relative;
+}*/
+
+.arm {
+    position: relative;
+    /*top: 12.5%;*/
+    top: 43%;
+    left: 0;
+    width: 200px;
+    height: 10px;
+    background: black;
+    float: left;
+}
+
+.capsule {
+    position: absolute;
+    top: 0%;
+    left: -30px;
+
+}
+
+.group1 .capsule {
+	animation: capsule-rotate-one 10s infinite linear;
+}
+
+
+@keyframes capsule-rotate-one {
+	0% {transform: rotate(360deg);}
+	100% {transform: rotate(0deg);}
+}
+
+.group2 .capsule {
+	animation: capsule-rotate-two 10s infinite linear;
+}
+
+
+@keyframes capsule-rotate-two {
+	0% {transform: rotate(300deg);}
+	100% {transform: rotate(-60deg);}
+}
+
+.group3 .capsule {
+	animation: capsule-rotate-three 10s infinite linear;
+}
+
+
+@keyframes capsule-rotate-three {
+	0% {transform: rotate(240deg);}
+	100% {transform: rotate(-120deg);}
+}
+
+.group4 .capsule {
+	animation: capsule-rotate-four 10s infinite linear;
+}
+
+
+@keyframes capsule-rotate-four {
+	0% {transform: rotate(180deg);}
+	100% {transform: rotate(-180deg);}
+}
+
+.group5 .capsule {
+	animation: capsule-rotate-five 10s infinite linear;
+}
+
+
+@keyframes capsule-rotate-five {
+	0% {transform: rotate(120deg);}
+	100% {transform: rotate(-240deg);}
+}
+
+.group6 .capsule {
+	animation: capsule-rotate-six 10s infinite linear;
+}
+
+
+@keyframes capsule-rotate-six {
+	0% {transform: rotate(60deg);}
+	100% {transform: rotate(-300deg);}
+}
+
+/*
+todo 1
+在轉的時候某些 capsule 的方向錯了。
+猜測是因為 transform rotate 的起始轉的角度
+所以才會第一個是 ok 的其他不 ok
+這樣要變成個別做 keyframe rotate ???
+
+done
+*/
+
+/*
+todo 2
+轉用 angular
+
+*/
+
+/*
+todo 3
+when click，搖一下 +- 10 deg
+
+*/
+
+
+
+
+
