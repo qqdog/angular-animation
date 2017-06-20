@@ -6,10 +6,22 @@ import {
   transition,
   animate,
   animation,
+  useAnimation,
   keyframes,
   group,
   query
 } from '@angular/animations';
+
+export const rotateAnimation = animation(
+  animate(
+    '10s linear',
+    keyframes([
+      style({ transform: 'rotate({{start}}deg)', offset: 0 }),
+      style({ transform: 'rotate({{end}}deg)', offset: 1 })
+    ])
+  ),
+  { params: { start: 0, end: 360 } }
+);
 
 @Component({
   selector: 'app-root',
@@ -19,70 +31,28 @@ import {
     trigger('ferrisSignal', [
       transition('stop=>start', [
         group([
-          animate(
-            '10s linear',
-            keyframes([
-              style({ transform: 'rotate(0deg)', offset: 0 }),
-              style({ transform: 'rotate(360deg)', offset: 1 })
-            ])
-          ),
+          useAnimation(rotateAnimation, { params: { start: 0, end: 360 } }),
           query('.group1 .capsule', [
-            animate(
-              '10s linear',
-              keyframes([
-                style({ transform: 'rotate(360deg)', offset: 0 }),
-                style({ transform: 'rotate(0deg)', offset: 1 })
-              ])
-            )
+            useAnimation(rotateAnimation, { params: { start: 360, end: 0 } })
           ]),
           query('.group2 .capsule', [
-            animate(
-              '10s linear',
-              keyframes([
-                style({ transform: 'rotate(300deg)', offset: 0 }),
-                style({ transform: 'rotate(-60deg)', offset: 1 })
-              ])
-            )
+            useAnimation(rotateAnimation, { params: { start: 300, end: -60 } })
           ]),
           query('.group3 .capsule', [
-            animate(
-              '10s linear',
-              keyframes([
-                style({ transform: 'rotate(240deg)', offset: 0 }),
-                style({ transform: 'rotate(-120deg)', offset: 1 })
-              ])
-            )
+            useAnimation(rotateAnimation, { params: { start: 240, end: -120 } })
           ]),
           query('.group4 .capsule', [
-            animate(
-              '10s linear',
-              keyframes([
-                style({ transform: 'rotate(180deg)', offset: 0 }),
-                style({ transform: 'rotate(-180deg)', offset: 1 })
-              ])
-            )
+            useAnimation(rotateAnimation, { params: { start: 180, end: -180 } })
           ]),
           query('.group5 .capsule', [
-            animate(
-              '10s linear',
-              keyframes([
-                style({ transform: 'rotate(120deg)', offset: 0 }),
-                style({ transform: 'rotate(-240deg)', offset: 1 })
-              ])
-            )
+            useAnimation(rotateAnimation, { params: { start: 120, end: -240 } })
           ]),
           query('.group6 .capsule', [
-            animate(
-              '10s linear',
-              keyframes([
-                style({ transform: 'rotate(60deg)', offset: 0 }),
-                style({ transform: 'rotate(-300deg)', offset: 1 })
-              ])
-            )
+            useAnimation(rotateAnimation, { params: { start: 60, end: -300 } })
           ])
         ])
       ]),
-      transition('start=>stop', [animate(0, style({ animate: 'none' }))])
+      transition('start=>stop', [style({ animate: 'none' })])
     ]),
     trigger('status', [state('shaking', style({}))])
   ]
