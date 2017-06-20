@@ -1,29 +1,32 @@
 .ferris {
-	position: relative;
-    width: 400px;
-    height: 400px;
-    margin: 25vh auto;
-    background-color: orange;
-    animation: ferris-rotate 10s infinite linear;
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 25vh auto;
+  background-color: orange;
+  /*animation: ferris-rotate 10s infinite linear;*/
 }
 
-@keyframes ferris-rotate {
-	0% {transform: rotate(0deg);}
-	100% {transform: rotate(360deg);}
-}
+/*@keyframes ferris-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}*/
 
 .group {
-	display: inline-block;
-    position: absolute;
-    top: 43%;
-    width: 200px;
-    height: 60px;
-    transform-origin: right;
+  display: inline-block;
+  position: absolute;
+  top: 43%;
+  width: 200px;
+  height: 60px;
+  transform-origin: right;
 }
 
-.group1{
-	transform: rotate(0deg);
-
+.group1 {
+  transform: rotate(0deg);
 }
 
 /*.group1:before {
@@ -33,8 +36,8 @@
     position: relative;
 }*/
 
-.group2{
-	transform: rotate(60deg);
+.group2 {
+  transform: rotate(60deg);
 }
 
 /*.group2:before {
@@ -45,7 +48,7 @@
 }*/
 
 .group3 {
-	transform: rotate(120deg);
+  transform: rotate(120deg);
 }
 
 /*.group3:before {
@@ -56,7 +59,7 @@
 }*/
 
 .group4 {
-	transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 /*.group4:before {
@@ -67,7 +70,7 @@
 }*/
 
 .group5 {
-	transform: rotate(240deg);
+  transform: rotate(240deg);
 }
 
 /*.group5:before {
@@ -78,7 +81,7 @@
 }*/
 
 .group6 {
-	transform: rotate(300deg);
+  transform: rotate(300deg);
 }
 
 /*.group6:before {
@@ -89,87 +92,44 @@
 }*/
 
 .arm {
-    position: relative;
-    /*top: 12.5%;*/
-    top: 43%;
-    left: 0;
-    width: 200px;
-    height: 10px;
-    background: black;
-    float: left;
+  position: relative;
+  /*top: 12.5%;*/
+  top: 43%;
+  left: 0;
+  width: 200px;
+  height: 10px;
+  background: black;
+  float: left;
 }
 
 .capsule {
-    position: absolute;
-    top: 0%;
-    left: -30px;
-
+  position: absolute;
+  top: 0%;
+  left: -30px;
 }
 
 .group1 .capsule {
   transform: rotate(360deg);
-	animation: capsule-rotate-one 10s infinite linear;
-}
-
-
-@keyframes capsule-rotate-one {
-	0% {transform: rotate(360deg);}
-	100% {transform: rotate(0deg);}
 }
 
 .group2 .capsule {
   transform: rotate(300deg);
-	animation: capsule-rotate-two 10s infinite linear;
-}
-
-
-@keyframes capsule-rotate-two {
-	0% {transform: rotate(300deg);}
-	100% {transform: rotate(-60deg);}
 }
 
 .group3 .capsule {
   transform: rotate(240deg);
-	animation: capsule-rotate-three 10s infinite linear;
-}
-
-
-@keyframes capsule-rotate-three {
-	0% {transform: rotate(240deg);}
-	100% {transform: rotate(-120deg);}
 }
 
 .group4 .capsule {
   transform: rotate(180deg);
-	animation: capsule-rotate-four 10s infinite linear;
-}
-
-
-@keyframes capsule-rotate-four {
-	0% {transform: rotate(180deg);}
-	100% {transform: rotate(-180deg);}
 }
 
 .group5 .capsule {
   transform: rotate(120deg);
-	animation: capsule-rotate-five 10s infinite linear;
-}
-
-
-@keyframes capsule-rotate-five {
-	0% {transform: rotate(120deg);}
-	100% {transform: rotate(-240deg);}
 }
 
 .group6 .capsule {
   transform: rotate(60deg);
-	animation: capsule-rotate-six 10s infinite linear;
-}
-
-
-@keyframes capsule-rotate-six {
-	0% {transform: rotate(60deg);}
-	100% {transform: rotate(-300deg);}
 }
 
 /*
@@ -193,8 +153,3 @@ todo 3
 when click，搖一下 +- 10 deg
 
 */
-
-
-
-
-
