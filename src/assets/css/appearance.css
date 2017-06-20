@@ -23,7 +23,7 @@
 
 .group1{
 	transform: rotate(0deg);
-	
+
 }
 
 /*.group1:before {
@@ -103,10 +103,11 @@
     position: absolute;
     top: 0%;
     left: -30px;
-    
+
 }
 
 .group1 .capsule {
+  transform: rotate(360deg);
 	animation: capsule-rotate-one 10s infinite linear;
 }
 
@@ -117,6 +118,7 @@
 }
 
 .group2 .capsule {
+  transform: rotate(300deg);
 	animation: capsule-rotate-two 10s infinite linear;
 }
 
@@ -127,6 +129,7 @@
 }
 
 .group3 .capsule {
+  transform: rotate(240deg);
 	animation: capsule-rotate-three 10s infinite linear;
 }
 
@@ -137,6 +140,7 @@
 }
 
 .group4 .capsule {
+  transform: rotate(180deg);
 	animation: capsule-rotate-four 10s infinite linear;
 }
 
@@ -147,6 +151,7 @@
 }
 
 .group5 .capsule {
+  transform: rotate(120deg);
 	animation: capsule-rotate-five 10s infinite linear;
 }
 
@@ -157,6 +162,7 @@
 }
 
 .group6 .capsule {
+  transform: rotate(60deg);
 	animation: capsule-rotate-six 10s infinite linear;
 }
 
