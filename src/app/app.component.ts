@@ -29,7 +29,7 @@ export const rotateAnimation = animation(
   styleUrls: ['./app.component.css'],
   animations: [
     trigger('ferrisSignal', [
-      transition('stop=>start', [
+      transition('stop=>run', [
         group([
           useAnimation(rotateAnimation, { params: { start: 0, end: 360 } }),
           query('.group1 .capsule', [
@@ -52,27 +52,23 @@ export const rotateAnimation = animation(
           ])
         ])
       ]),
-      transition('start=>stop', [style({ animate: 'none' })])
-    ]),
-    trigger('status', [state('shaking', style({}))])
+      transition('run=>stop', [style({ animate: 'none' })])
+    ])
   ]
 })
 export class AppComponent {
   title = 'app works!';
   ferrisSignal = 'stop';
-  status: string;
 
   stopSignal() {
     this.ferrisSignal = 'stop';
   }
 
-  startSignal() {
-    this.ferrisSignal = 'start';
+  RunSignal() {
+    this.ferrisSignal = 'run';
   }
 
-  shake() {
-    this.status = 'shaking';
+  animationDone() {
+    this.ferrisSignal = 'stop';
   }
 }
-
-// shaking not done

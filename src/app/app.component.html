@@ -1,7 +1,7 @@
-<div class="ferris" [@ferrisSignal]="ferrisSignal">
+<div class="ferris" [@ferrisSignal]="ferrisSignal" (@ferrisSignal.done)="animationDone($event)">
   <div class="group group1">
     <div class="arm"></div>
-    <img class="capsule" src="../assets/images/capsule.png" (click)="shake()" [@status]="status">
+    <img class="capsule" src="../assets/images/capsule.png">
   </div>
   <div class="group group2">
     <div class="arm"></div>
@@ -25,5 +25,5 @@
   </div>
 </div>
 
-<button (click)="stopSignal()">stop</button>
-<button (click)="startSignal()">run once</button>
+<button (click)="stopSignal()">Stop</button>
+<button (click)="RunSignal()">Run Once</button>
