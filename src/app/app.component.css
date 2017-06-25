@@ -131,3 +131,46 @@
 .group6 .capsule {
   transform: rotate(60deg);
 }
+
+.rectangle {
+	position: relative;
+  left: 25%;
+  width: 350px;
+  height: 70px;
+  background: black;
+  float: left;
+}
+
+.left {
+	position: absolute;
+  transform: rotate(-72deg);
+  background: black;
+  bottom: 21.5%;
+  width: 500px;
+  height: 15px;
+  left: 26px;
+}
+
+.right {
+	position: absolute;
+  transform: rotate(72deg);
+  background: black;
+  bottom: 21.5%;
+  width: 500px;
+  height: 15px;
+  left: 180px;
+}
+
+.stopButton {
+    left: -120px;
+    position: relative;
+    top: 20px;
+    width: 90px;
+}
+
+.runButton {
+    left: -60px;
+    position: relative;
+    top: 20px;
+    width: 90px;
+}
